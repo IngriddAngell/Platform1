@@ -4,3 +4,8 @@
         font-size: 100px;
         font-weight: normal;
  }
+
+ p{
+       font-family: Georgia, 'Times New Roman', serif;
+       line-height: 20px;
+ }
