@@ -67,3 +67,9 @@ body {
        font-size: 40px;
        font-weight: bold;
 }
+
+.header ul li{
+       display: inline-block;
+       margin-top: 20px;
+       margin-right: 10px;
+}
