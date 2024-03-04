@@ -10,6 +10,22 @@
        line-height: 20px;
  }
  body{
-       background-color: lightblue;
        background-image: url(gambar1.jpeg);
+       font-family: arial;
+       font: 16px/28px arial, sans-serif
  }
+
+ ul li a{
+       color: orange;
+ }
+
+ ol li a{
+       color: red;
+ }
+ 
+
+ .cointainer{
+       width: 800px;
+       margin: auto;
+
+ } 
