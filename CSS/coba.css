@@ -77,9 +77,17 @@ body {
 .header a{
       text-decoration: none;
       color: salmon; 
+      padding: 3px;
 }
 
 .header a:hover{
        background-color: lightskyblue;
        color: white;
+}
+
+.hero{
+       height: 829px;
+       background-image: url(D._I._Pandjaitan.jpg);
+       background-size: cover;
+       background-position: 960 960px;
 }
