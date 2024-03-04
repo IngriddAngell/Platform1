@@ -61,6 +61,7 @@ body {
 
 .header {
        padding: 20px;
+       padding-bottom: 10px;
 }
 
 .header .judul{
@@ -89,5 +90,19 @@ body {
        height: 829px;
        background-image: url(D._I._Pandjaitan.jpg);
        background-size: cover;
-       background-position: 960 960px;
+       background-position: 144 211px;
+}
+
+.centent{
+       padding: 20px;
+}
+
+.content h2{
+       font-size: 28px;
+       font-weight: bold;
+}
+
+.centent penulis{
+       font-size: -11px;
+       margin-top: -5px;
 }
