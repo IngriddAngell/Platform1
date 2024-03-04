@@ -50,6 +50,7 @@ table {
 body {
        font: 16px/28px arial, sans-serif;
        background-color: #eaeaea;
+       background-image: url(gambar1.png);
        color: #333;
 }
 
@@ -93,7 +94,7 @@ body {
        background-position: 144 211px;
 }
 
-.centent{
+.content{
        padding: 20px;
 }
 
@@ -105,4 +106,19 @@ body {
 .centent penulis{
        font-size: -11px;
        margin-top: -5px;
+}
+
+.content p{
+       margin-bottom: 20px;
+       font-size: 14px;
+}
+.footer{
+       background-color: #333;
+       padding: 10px;
+
+}
+.footer .copy{
+       color: #eaeaea;
+       text-align: center;
+       font-size: 12px;
 }
