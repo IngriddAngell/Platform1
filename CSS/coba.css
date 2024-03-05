@@ -56,8 +56,16 @@ body {
 
 .container {
        width: 960px;
-       margin: 80 px auto;
+       margin: 80px auto;
        background-color: white;
+}
+
+.x {
+       width: 200px;
+       height: 200px;
+       background-image: url(gambar3.png);
+       background-repeat: no-repeat;
+       display: inline-block;
 }
 
 .header {
