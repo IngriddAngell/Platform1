@@ -55,7 +55,7 @@ body {
 }
 
 .container {
-       width: 800px;
+       width: 960px;
        margin: auto;
        background-color: white;
 }
@@ -88,27 +88,30 @@ body {
 }
 
 .hero{
-       height: 829px;
+       height: 900px;
        background-image: url(D._I._Pandjaitan.jpg);
        background-size: cover;
-       background-position: 144 211px;
+       background-position: 144 250px;
 }
 
-.content{
+.main{
+       width: 600px;
        padding: 20px;
+       box-sizing: border-box;
+       float: left;
 }
 
-.content h2{
+.main h2{
        font-size: 28px;
        font-weight: bold;
 }
 
-.centent penulis{
+.main penulis{
        font-size: -11px;
        margin-top: -5px;
 }
 
-.content p{
+.main p{
        margin-bottom: 20px;
        font-size: 14px;
 }
@@ -121,4 +124,19 @@ body {
        color: #eaeaea;
        text-align: center;
        font-size: 12px;
+}
+
+/* clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
 }
