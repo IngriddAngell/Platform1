@@ -56,7 +56,7 @@ body {
 
 .container {
        width: 960px;
-       margin: auto;
+       margin: 80 px auto;
        background-color: white;
 }
 
@@ -128,9 +128,15 @@ body {
        color: #666;
 }
 
-.sidebar image {
+.sidebar img {
        width: 70px;
        height: 70px;
+       float: left;
+       padding-right: 10px;
+}
+
+.sidebar p{
+       font: 15px/20px arial sans-serif;
 }
 .footer{
        background-color: #333;
