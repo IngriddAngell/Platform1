@@ -115,6 +115,11 @@ body {
        margin-bottom: 20px;
        font-size: 14px;
 }
+
+/* sidebar */
+.sidebar{
+       width: 300px;
+}
 .footer{
        background-color: #333;
        padding: 10px;
