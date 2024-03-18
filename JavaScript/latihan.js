@@ -1,14 +1,26 @@
-//DOM Selection part 1
-//getElementById
-const judul = document.getElementById('judul');
-judul.style.color ='red';
-judul.style.backgroundColor = 'grey';
-judul.innerHTML = 'Ingrid Angel';
+const form = document.getElementById('inputform');
+const pilihanContainer = document.getElementById('pilihanContainer');
 
+document.getElementById('submitButton').addEventListener('click', function(event) {
+    event.preventDefault();
 
-//document.getElementsByTagName
+    const jumlahPilihan = parseInt(document.getElementById('jumlahPilihan').value);
+    pilihanContainer.innerHTML = '';
 
-const p = document.getElementsByTagName('p');
-for (int i = 0; i < p.length; i++){
-    p[i].style.backgroundColor = 'lightblue'
-}
+    const defaultOptions = ['ayam', 'bebek', 'kucing', 'ikan', 'angsa'];
+
+    for (let i = 0; i < jumlahPilihan; i++) {
+        const label = document.createElement('label');
+        label.textContent = Pilihan ${i + 1}:;
+
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.name = pilihan${i + 1};
+        input.value = defaultOptions[i] || '';
+
+        pilihanContainer.appendChild(label);
+        pilihanContainer.appendChild(input);
+        pilihanContainer.appendChild(document.createElement('br'));
+    }
+});
+    
