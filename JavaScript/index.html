@@ -9,6 +9,9 @@
         h1 {
             text-align: center;
         }
+        h2{
+          text-align: center;
+        }
         form {
             display: flex;
             flex-direction: column;
@@ -33,6 +36,10 @@
         button:hover {
             background-color: #3E8E41;
         }
+        .container {
+          display: flex;
+          justify-content: center;
+         }
         .pilihan-container {
             margin-top: 20px;
             text-align: center;
@@ -53,14 +60,16 @@
 </head>
 <body>
 <header>
-    <h1>Nama: [Your Name]</h1>
-    <h2>NIM: [Your NIM]</h2>
-    <img src="[Your Photo URL]" alt="Your Photo" width="200">
+    <h1>Nama: Ingrid Felita Angel Santoso</h1>
+    <h2>NIM: 225314004</h2>
+    <div class="container">
+      <img src="gambar2.png" alt="Gambar">
+    </div>
 </header>
 <main>
     <form id="inputform">
         <div>
-            <label for="Nama">Nama</label><br>
+            <label for="name">Nama</label><br>
             <input type="text" id="Nama" name="Nama"><br>
         </div>
         <div>
@@ -70,8 +79,9 @@
         <div>
             <button id="submitButton">Ok</button>
         </div>
-    </form>
+      </form>
     <div id="pilihanContainer" class="pilihan-container"></div>
+    <div id="languages"></div>
     <div id="errorMessages"></div>
     <script src = "latihan.js">
     </script>
