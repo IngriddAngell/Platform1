@@ -11,11 +11,11 @@ document.getElementById('submitButton').addEventListener('click', function(event
 
     for (let i = 0; i < jumlahPilihan; i++) {
         const label = document.createElement('label');
-        label.textContent = Pilihan ${i + 1}:;
+        label.textContent = 'Pilihan ' + (i + 1) + ':';
 
         const input = document.createElement('input');
         input.type = 'text';
-        input.name = pilihan${i + 1};
+        input.name = 'pilihan' + (i + 1);
         input.value = defaultOptions[i] || '';
 
         pilihanContainer.appendChild(label);

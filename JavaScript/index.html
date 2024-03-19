@@ -1,81 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Input Form</title>
     <style>
-      /* Add some basic styling */
-      body {
-        font-family: Arial, sans-serif;
-      }
-      h1 {
-        text-align: center;
-      }
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      label {
-        margin-top: 10px;
-      }
-      input[type="text"], input[type="number"] {
-        margin-top: 5px;
-        margin-bottom: 10px;
-      }
-      button {
-        margin-top: 10px;
-        padding: 5px 10px;
-        border: none;
-        border-radius: 5px;
-        background-color: #4CAF50;
-        color: white;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #3E8E41;
-      }
-      .pilihan-container {
-        margin-top: 20px;
-      }
-      .pilihan-container label {
-        display: inline-block;
-        margin-right: 10px;
-      }
-      .pilihan-container input[type="text"] {
-        margin-right: 5px;
-      }
-      .pilihan-container button {
-        margin-top: 10px;
-      }
-      .result-container {
-        margin-top: 20px;
-        font-size: 20px;
-        text-align: center;
-      }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="number"] {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3E8E41;
+        }
+        .pilihan-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .pilihan-container label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .pilihan-container input[type="text"] {
+            margin-right: 5px;
+        }
+        .result-container {
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
     </style>
-  </head>
-  <body>
-    <header>
-      <h1>Nama: Ingrid Felita A</h1>
-      <h2>NIM: </h2>
-      <img src="[Your Photo URL]" alt="Your Photo" width="200">
-    </header>
-    <main>
-    <form id ="inputform">
-      <div> 
-        <label for = "Nama">Nama</label><br>
-        <input type = "text" id = "Nama" name = "Nama"><br>
-      </div>
-      <div>
-        <label for = "jumlahPilihan">Jumlah Pilihan</label><br>
-        <input type ="number" id = "jumlahPilihan" name = "jumlahPilihan"><br>
-      </div>
-      <div>
-       <button id = "submitButton">Ok</button>
-      </div>
+</head>
+<body>
+<header>
+    <h1>Nama: [Your Name]</h1>
+    <h2>NIM: [Your NIM]</h2>
+    <img src="[Your Photo URL]" alt="Your Photo" width="200">
+</header>
+<main>
+    <form id="inputform">
+        <div>
+            <label for="Nama">Nama</label><br>
+            <input type="text" id="Nama" name="Nama"><br>
+        </div>
+        <div>
+            <label for="jumlahPilihan">Jumlah Pilihan</label><br>
+            <input type="number" id="jumlahPilihan" name="jumlahPilihan"><br>
+        </div>
+        <div>
+            <button id="submitButton">Ok</button>
+        </div>
     </form>
-    <div id = "pilihanContainer" class = "pilihan-container"></div>
-    <div id = "errorMessages"></div>
-    <script src = "latihan.js"></script>
-  </body>
+    <div id="pilihanContainer" class="pilihan-container"></div>
+    <div id="errorMessages"></div>
+    <script src = "latihan.js">
+    </script>
+</body>
 </html>
