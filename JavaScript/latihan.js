@@ -17,6 +17,7 @@ document.getElementById('submitButton').addEventListener('click', function(event
     const pilihanContainer = document.getElementById('pilihanContainer');
     pilihanContainer.innerHTML = '';
 
+    // Buat input untuk pilihan
     for (let i = 0; i < jumlahPilihan; i++) {
         const label = document.createElement('label');
         label.textContent = 'Pilihan ' + (i + 1) + ':';
@@ -35,46 +36,50 @@ document.getElementById('submitButton').addEventListener('click', function(event
     okButton.textContent = 'Ok';
     okButton.type = 'button';
     okButton.addEventListener('click', function() {
-
-        // Create radio buttons with text
-        for (let i = 0; i < jumlahPilihan; i++) {
-            const label = document.createElement('label');
-            const radio = document.createElement('input');
-            const span = document.createElement('span');
-
-            const pilihan = document.querySelector('input[name="pilihan' + (i + 1) + '"]').value;
-
-            radio.type = 'radio';
-            radio.name = 'selectedOption';
-            radio.value = pilihan;
-
-            span.textContent = pilihan;
-
-            label.appendChild(radio);
-            label.appendChild(span);
-
-            pilihanContainer.appendChild(label);
-            pilihanContainer.appendChild(document.createElement('br'));
-        }
-
-        const radios = document.querySelectorAll('input[name="selectedOption"]');
-        radios[0].focus(); // Set focus to the first radio button
-
-        const okBtn = document.createElement('button');
-        okBtn.textContent = 'OK';
-        okBtn.type = 'button';
-        okBtn.classList.add('btn');
-        okBtn.addEventListener('click', submitForm);
-        pilihanContainer.appendChild(document.createElement('br')); // Add line break
-        pilihanContainer.appendChild(okBtn);
-
-        document.getElementById('submitBtn').style.display = 'block'; // Show the submit button
+        createRadioButtons(pilihanContainer, jumlahPilihan);
+        createSubmitButton(pilihanContainer);
     });
     pilihanContainer.appendChild(okButton);
 });
 
 function nameIsValid(name) {
     return name.trim() !== '';
+}
+
+const br = document.createElement('br');
+
+function createRadioButtons(container, jumlahPilihan) {
+    const br = document.createElement('br');
+    // Create radio buttons with text
+    for (let i = 0; i < jumlahPilihan; i++) {
+        const label = document.createElement('label');
+        const radio = document.createElement('input');
+        const span = document.createElement('span');
+
+        const pilihan = document.querySelector('input[name="pilihan' + (i + 1) + '"]').value;
+
+        radio.type = 'radio';
+        radio.name = 'selectedOption';
+        radio.value = pilihan;
+
+        span.textContent = pilihan;
+
+        label.appendChild(radio);
+        label.appendChild(span);
+
+        container.appendChild(label);
+        container.appendChild(document.createElement('br'));
+    }
+}
+
+function createSubmitButton(container) {
+    const okBtn = document.createElement('button');
+    okBtn.textContent = 'OK';
+    okBtn.type = 'button';
+    okBtn.classList.add('btn');
+    okBtn.addEventListener('click', submitForm);
+    container.appendChild(br); // Add line break
+    container.appendChild(okBtn);
 }
 
 function submitForm() {
