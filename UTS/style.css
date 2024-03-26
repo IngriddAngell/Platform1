@@ -3,9 +3,14 @@ body {
 }
 .jumbotron {
   padding: 2rem 1rem;
-  background-color: ivory;
+  background-color: lightyellow;
 }
 
 #events {
-  background-color: ivory;
+  background-color: lightyellow;
+  padding-top: 1rem;
+}
+
+.pendidikan {
+  padding: 1rem;
 }
