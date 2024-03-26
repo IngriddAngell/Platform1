@@ -1,16 +1,21 @@
 body {
-  min-height: 2000px;
+  min-height: 3000px;
 }
 .jumbotron {
-  padding: 2rem 1rem;
+  padding: 8rem;
   background-color: lightyellow;
 }
 
 #events {
   background-color: lightyellow;
-  padding-top: 1rem;
+  padding-top: 6rem;
+  padding-bottom: 1rem;
 }
 
-.pendidikan {
-  padding: 1rem;
+#pendidikan {
+  padding-top: 6rem;
+}
+
+section {
+  padding-top: 5rem;
 }
