@@ -19,3 +19,9 @@ body {
 section {
   padding-top: 5rem;
 }
+
+#tugas {
+  background-color: lightyellow;
+  padding-top: 6rem;
+  padding-bottom: 1rem;
+}
