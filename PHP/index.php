@@ -7,18 +7,45 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body class = "bg-primary">
-    <form action="">
+    <form action="insert.php" method="POST">
     <div class="container">
         <div class="row justify-content-center m-auto bg-white mt-3 py-3 col-md-6">
             <h3 class="text-center text-primary font-monospace">TO-DO LIST</h3>
             <div class="col-8">
-                <input type="text" name =" " class="form-control">
+                <input type="text" name ="list" class="form-control">
             </div>
             <div class="col-2">
-                <button>ADD</button>
+                <button class="btn btn-outline-primary">ADD</button>
             </div>
         </div>
     </div>
 </form>
+
+<!-- getdata -->
+<?php
+include "config.php";
+$rawData= mysqli_query($con, "select * from tbltodo");
+
+?>
+<div class= "container">
+    <div class="col-8 bg-white m-auto mt-3">
+
+<table class="table">
+    <tbody>
+        <?php
+        while($row = mysqli_fetch_array($rawData)){
+        ?>
+        <tr>
+            <td><?php echo $row['list'] ?></td>
+            <td style="width: 10%"><a href="delete.php? list=<?php echo $row['list'] ?>" class="btn btn-outline-danger">delete</a></td>
+            <td style="width: 10%"><a href="" class="btn btn-outline-success">update</a></td>
+        </tr>
+        <?php
+        }
+        ?>
+    </tbody>
+</table>
+</div>
+</div>
 </body>
 </html>
