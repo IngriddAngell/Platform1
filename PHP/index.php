@@ -38,7 +38,7 @@ $rawData= mysqli_query($con, "select * from tbltodo");
         <tr>
             <td><?php echo $row['list'] ?></td>
             <td style="width: 10%"><a href="delete.php? list=<?php echo $row['list'] ?>" class="btn btn-outline-danger">delete</a></td>
-            <td style="width: 10%"><a href="" class="btn btn-outline-success">update</a></td>
+            <td style="width: 10%"><a href="update.php? list=<?php echo $row['list'] ?>" class="btn btn-outline-success">update</a></td>
         </tr>
         <?php
         }
