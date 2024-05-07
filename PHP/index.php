@@ -24,7 +24,7 @@
 <!-- getdata -->
 <?php
 include "config.php";
-$rawData= mysqli_query($con, "select * from tbltodo");
+$rawData= mysqli_query($con, "select * from todo");
 
 ?>
 <div class= "container">
@@ -36,9 +36,10 @@ $rawData= mysqli_query($con, "select * from tbltodo");
         while($row = mysqli_fetch_array($rawData)){
         ?>
         <tr>
-            <td><?php echo $row['list'] ?></td>
-            <td style="width: 10%"><a href="delete.php? list=<?php echo $row['list'] ?>" class="btn btn-outline-danger">delete</a></td>
-            <td style="width: 10%"><a href="update.php? list=<?php echo $row['list'] ?>" class="btn btn-outline-success">update</a></td>
+            <td><?php echo $row ['id'] ?></td>
+            <td><?php echo $row ['list'] ?></td>
+            <td style="width: 10%"><a href="delete.php? id=<?php echo $row['id'] ?>" class="btn btn-outline-danger">delete</a></td>
+            <td style="width: 10%"><a href="update.php? id=<?php echo $row['id'] ?>" class="btn btn-outline-success">update</a></td>
         </tr>
         <?php
         }

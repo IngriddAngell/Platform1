@@ -10,7 +10,7 @@ if ($conn->connect_error){
     die("Connection Failed " . $conn->connect_error);
 }
 
-$sql = "DELETE FROM todo WHERE Id=" . $_GET['id'] . "";
+$sql = "UPDATE todo SET list='".$_POST['list'] . "' WHERE id= '" . $_POST['id']. "'";
 
 if ($conn->query($sql) === TRUE){
     echo "Record updated successfully";
