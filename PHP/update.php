@@ -11,7 +11,7 @@
 <?php
 $id = $_GET['id'];
 include "config.php";
-$Rdata = mysqli_query($con, "select * from todo where Id = $id");
+$Rdata = mysqli_query($conn, "select * from todo where Id = $id");
 $data = mysqli_fetch_array($Rdata);
 ?>
 
