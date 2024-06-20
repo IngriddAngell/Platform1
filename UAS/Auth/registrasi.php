@@ -1,5 +1,5 @@
 <?php
-include '../function.php';
+require '../config/function.php';
 if(isset($_POST["register"])){
     if(registrasi($_POST) > 0){
         echo "<script>

@@ -1,15 +1,15 @@
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "phpdasar1";
 
-$conn = mysqli_connect("localhost", "root", "", "phpdasar1");
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-function query($query){
-    global $conn;
-    $result = mysqli_query($conn, $query); 
-    $rows = [];
-    while($row = mysqli_fetch_assoc($result)){
-        $rows[] = $row;
-    }
-    return $rows;
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
 function registrasi($data){
@@ -19,7 +19,6 @@ function registrasi($data){
     $email = mysqli_real_escape_string($conn, $data["email"]);
     $gender = mysqli_real_escape_string($conn, $data["gender"]);
     $password = mysqli_real_escape_string($conn, $data["password"]);
-    $password2 = mysqli_real_escape_string($conn, $data["password2"]);
 
     // Cek username
     $result = mysqli_query($conn, "SELECT username FROM register WHERE username = '$username'");
@@ -31,7 +30,7 @@ function registrasi($data){
     }
 
     // Cek konfirmasi password
-    if($password != $password2){
+    if($password != $password){
         echo "<script>
         alert('konfirmasi password tidak sesuai');
         </script>";
@@ -41,9 +40,8 @@ function registrasi($data){
     // Enkripsi password
     $password = password_hash($password, PASSWORD_DEFAULT);
 
-    /tambahkan user baru ke database
+    //tambahkan user baru ke database
     mysqli_query($conn, "INSERT INTO register VALUES ('','$username', '$email', '$gender', '$password')");
     return mysqli_affected_rows($conn);
 }
 ?>
-

@@ -261,7 +261,7 @@
                                 </a>
                             </div>
                             <div class="col-md-4">
-                                <a href="https://wa.me/+6285743727419?text=Halo%20saya%20ingin%20menanyakan%20informasi%20lebih%20lanjut">
+                                <a href="https://wa.me/+6285727720448?text=Halo%20saya%20ingin%20menanyakan%20informasi%20lebih%20lanjut">
                                     <div class="item">
                                         <div class="img-box">
                                             <i class="fa fa-whatsapp" aria-hidden="true"></i>

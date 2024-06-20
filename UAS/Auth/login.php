@@ -1,16 +1,21 @@
 <?php
-include '../function.php';
+include '../config/function.php';
+
 if(isset($_POST["login"])){
+    echo "Form Submitted!<br>";
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $result = mysqli_query($conn, "SELECT * FROM register WHERE username = '$username'");
+    echo "Username: $username<br>";
+    echo "Password: $password<br>";
 
-    // Check username
+    $result = mysqli_query($conn, "SELECT * FROM registrasi WHERE username = '$username'");
+
     if(mysqli_num_rows($result) == 1){
-        // Check password
         $row = mysqli_fetch_assoc($result);
+        echo "Fetched User: " . print_r($row, true) . "<br>";
         if(password_verify($password, $row["password"])){
-            header("location: index.php");
+            echo "Password verified!<br>";
+            header("location: kost.php");
             exit;
         } else {
             echo "<script>alert('Incorrect password');</script>";
@@ -35,7 +40,7 @@ if(isset($_POST["login"])){
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form action="" method="post" class="login-form">
+    <form action="../Kost/kost.php" method="post" class="login-form">
         <h3>Login Here</h3>
 
         <label for="username">Username</label>
