@@ -1,0 +1,34 @@
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #b1b0ee;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.container {
+    position: relative;
+    z-index: 1;
+}
+.room img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+    object-fit: cover; /* Menjaga aspek gambar */
+    max-height: 200px; /* Tinggi maksimum kartu */
+}
+.room img:hover {
+    transform: scale(1.05);
+}
+.room {
+    margin-bottom: 30px;
+}
+.room h3 {
+    margin-top: 15px;
+}

@@ -41,8 +41,9 @@ function registrasi($data){
     // Enkripsi password
     $password = password_hash($password, PASSWORD_DEFAULT);
 
-    //tambahkan user baru ke database
+    /tambahkan user baru ke database
     mysqli_query($conn, "INSERT INTO register VALUES ('','$username', '$email', '$gender', '$password')");
     return mysqli_affected_rows($conn);
 }
 ?>
+
