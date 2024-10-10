@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "phpdasar1";
+$dbname = "kos";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -15,13 +15,16 @@ if ($conn->connect_error) {
 function registrasi($data){
     global $conn;
 
-    $username = strtolower(stripslashes($data["username"]));
+    $nama = mysqli_real_escape_string($conn, $data["nama"]);
     $email = mysqli_real_escape_string($conn, $data["email"]);
-    $gender = mysqli_real_escape_string($conn, $data["gender"]);
+    $No_telp = mysqli_real_escape_string($conn, $data["nomor"]);
+    $Alamat = mysqli_real_escape_string($conn, $data["alamat"]);
+    $username = strtolower(stripslashes($data["username"]));
     $password = mysqli_real_escape_string($conn, $data["password"]);
+    $password2 = mysqli_real_escape_string($conn, $data["confirm-password"]);
 
     // Cek username
-    $result = mysqli_query($conn, "SELECT username FROM register WHERE username = '$username'");
+    $result = mysqli_query($conn, "SELECT Email FROM customer WHERE Email = '$email'");
     if (mysqli_fetch_assoc($result)){
         echo "<script>
          alert('username sudah ada');
@@ -30,7 +33,7 @@ function registrasi($data){
     }
 
     // Cek konfirmasi password
-    if($password != $password){
+    if($password != $password2){
         echo "<script>
         alert('konfirmasi password tidak sesuai');
         </script>";
@@ -41,7 +44,9 @@ function registrasi($data){
     $password = password_hash($password, PASSWORD_DEFAULT);
 
     //tambahkan user baru ke database
-    mysqli_query($conn, "INSERT INTO register VALUES ('','$username', '$email', '$gender', '$password')");
+    // mysqli_query($conn, "INSERT INTO customer VALUES ('','$username', '$email', '$gender', '$password')");
+    mysqli_query($conn, "INSERT INTO `customer` (`Nama`, `Email`, `No_telp`, `Alamat`, `username`, `password`) 
+    VALUES ('$nama', '$email', '$No_telp', '$Alamat', '$username', '$password')");    
     return mysqli_affected_rows($conn);
 }
 ?>

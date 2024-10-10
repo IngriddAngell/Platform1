@@ -8,7 +8,7 @@ if(isset($_POST["login"])){
     echo "Username: $username<br>";
     echo "Password: $password<br>";
 
-    $result = mysqli_query($conn, "SELECT * FROM registrasi WHERE username = '$username'");
+    $result = mysqli_query($conn, "SELECT * FROM customer WHERE username = '$username'");
 
     if(mysqli_num_rows($result) == 1){
         $row = mysqli_fetch_assoc($result);
@@ -40,7 +40,7 @@ if(isset($_POST["login"])){
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form action="../Kost/kost.php" method="post" class="login-form">
+    <form action="w2ww" method="post" class="login-form">
         <h3>Login Here</h3>
 
         <label for="username">Username</label>

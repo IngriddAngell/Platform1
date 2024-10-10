@@ -52,6 +52,39 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-WEj0VXkBI2WkUmR2GEAr7pN1Z0QKtvHohqMKNmK8ho2I4ShZsh2e5khLPvFJbbMO" crossorigin="anonymous"></script>
 
 <!-- JavaScript External -->
-<script src="../js/sendWhatsApp.js"></script>
+<script>
+function sendWhatsApp() {
+  var nama = document.getElementById("nama").value;
+  var email = document.getElementById("email").value;
+  var telepon = document.getElementById("telepon").value;
+  var tanggal = document.getElementById("tanggal").value;
+  var tipeKamar = document.getElementById("tipe_kamar").value;
+
+  // Validasi input
+  if (!nama || !email || !telepon || !tanggal || !tipeKamar) {
+    alert("Mohon isi semua field!");
+    return;
+  }
+
+  // Debugging log
+  console.log("Nama:", nama);
+  console.log("Email:", email);
+  console.log("Telepon:", telepon);
+  console.log("Tanggal:", tanggal);
+  console.log("Tipe Kamar:", tipeKamar);
+
+  // Format pesan untuk WhatsApp
+  var message = "Pemesanan Kamar Kost:\n\n" + "Nama: " + nama + "\n" + "Email: " + email + "\n" + "Nomor Telepon: " + telepon + "\n" + "Tanggal Check-in: " + tanggal + "\n" + "Tipe Kamar: " + tipeKamar;
+
+  // URL untuk WhatsApp dengan parameter pesan
+  var url = "https://wa.me/6285727720448?text=" + encodeURIComponent(message);
+
+  // Debugging log untuk URL
+  console.log("WhatsApp URL:", url);
+
+  // Arahkan pengguna ke WhatsApp
+  window.location.href = url;
+}
+</script>
 </body>
 </html>

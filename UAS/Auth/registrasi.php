@@ -26,29 +26,31 @@ if(isset($_POST["register"])){
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form action="" method="post">
+    <form action="index.php" method="post">
         <h3>Register Here</h3>
 
-        <label for="username">Username</label>
-        <input type="text" placeholder="Username" id="username" name="username" required>
+        <label for="nama">Nama</label>
+        <input type="text" placeholder="Nama" id="nama" name="nama" required>
 
         <label for="email">Email</label>
         <input type="email" placeholder="Email" id="email" name="email" required>
 
-        <div class="form-group">
-            <label for="gender" class="text-secondary">Gender</label>
-            <select id="gender" class="form-control" name="gender" required>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
+        <label for="nomor">No. Telp</label>
+        <input type="text" placeholder="No. Telpon" id="nomor" name="nomor" required>
+
+        <label for="alamat">Alamat</label>
+        <input type="text" placeholder="Alamat" id="alamat" name="alamat" required>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" id="username" name="username" required>
+
         </div>
 
         <label for="password">Password</label>
         <input type="password" placeholder="Password" id="password" name="password" required>
 
         <label for="confirm-password">Confirm Password</label>
-        <input type="password" placeholder="Confirm Password" id="confirm-password" name="password2" required>
+        <input type="password" placeholder="Confirm Password" id="confirm-password" name="confirm-password" required>
 
         <button type="submit" class="btn btn-light btn-block" name="register">Register</button>
     </form>
